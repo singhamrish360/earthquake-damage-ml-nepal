@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# raw data is ~160 MB (above GitHub's 100 MB limit); download with src/eq_damage.py
+data/raw/

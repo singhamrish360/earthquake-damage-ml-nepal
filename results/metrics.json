@@ -1,0 +1,380 @@
+{
+  "cleaning": {
+    "raw_rows": 762106,
+    "raw_cols": 31,
+    "dropped_missing_target": 12,
+    "dropped_missing_features": 0,
+    "age_999_set_to_nan": 3144,
+    "clean_rows": 762094
+  },
+  "n_train": 609675,
+  "n_test": 152419,
+  "cv": {
+    "n_rows": 100000,
+    "k": 5,
+    "logreg": {
+      "macro_f1": {
+        "mean": 0.2987023007372245,
+        "std": 0.0016304745649519173
+      },
+      "micro_f1": {
+        "mean": 0.43777,
+        "std": 0.0007953615530059293
+      },
+      "weighted_f1": {
+        "mean": 0.33996001601835546,
+        "std": 0.0009841879448308445
+      },
+      "within_one_grade": {
+        "mean": 0.73324,
+        "std": 0.0017488281790959193
+      },
+      "accuracy": {
+        "mean": 0.43777,
+        "std": 0.0007953615530059293
+      }
+    },
+    "lgbm": {
+      "macro_f1": {
+        "mean": 0.3714159085282659,
+        "std": 0.0023716416611463597
+      },
+      "micro_f1": {
+        "mean": 0.45266,
+        "std": 0.00303749897119325
+      },
+      "weighted_f1": {
+        "mean": 0.4069126369077898,
+        "std": 0.0029340985753286987
+      },
+      "within_one_grade": {
+        "mean": 0.7715000000000001,
+        "std": 0.0018881207588499402
+      },
+      "accuracy": {
+        "mean": 0.45266,
+        "std": 0.00303749897119325
+      }
+    }
+  },
+  "test": {
+    "logreg": {
+      "macro_f1": 0.3008751454314054,
+      "micro_f1": 0.4390988000183704,
+      "weighted_f1": 0.341989559162506,
+      "within_one_grade": 0.7332156752110958,
+      "accuracy": 0.4390988000183704,
+      "train_rows": 200000,
+      "fit_seconds": 12.8,
+      "confusion": [
+        [
+          10042,
+          563,
+          988,
+          458,
+          3712
+        ],
+        [
+          5219,
+          662,
+          1557,
+          1166,
+          8847
+        ],
+        [
+          2831,
+          591,
+          2203,
+          2432,
+          19226
+        ],
+        [
+          1042,
+          246,
+          1829,
+          3429,
+          30223
+        ],
+        [
+          914,
+          165,
+          1068,
+          2415,
+          50591
+        ]
+      ]
+    },
+    "lgbm": {
+      "macro_f1": 0.3909181853293483,
+      "micro_f1": 0.47403538928873695,
+      "weighted_f1": 0.42631695146498677,
+      "within_one_grade": 0.7805194890400803,
+      "accuracy": 0.47403538928873695,
+      "train_rows": 548707,
+      "best_iteration": 742,
+      "fit_seconds": 54.5,
+      "confusion": [
+        [
+          9805,
+          1571,
+          1010,
+          934,
+          2443
+        ],
+        [
+          4131,
+          2493,
+          2376,
+          2259,
+          6192
+        ],
+        [
+          2139,
+          1549,
+          4507,
+          5167,
+          13921
+        ],
+        [
+          817,
+          686,
+          2890,
+          9309,
+          23067
+        ],
+        [
+          800,
+          462,
+          1790,
+          5963,
+          46138
+        ]
+      ]
+    },
+    "lgbm_plus_district": {
+      "macro_f1": 0.4716526671393872,
+      "micro_f1": 0.529185993872155,
+      "weighted_f1": 0.5116875029545255,
+      "within_one_grade": 0.8441926531469174,
+      "accuracy": 0.529185993872155,
+      "train_rows": 548707,
+      "best_iteration": 918,
+      "fit_seconds": 64.4,
+      "confusion": [
+        [
+          10619,
+          2114,
+          1489,
+          911,
+          630
+        ],
+        [
+          4160,
+          3767,
+          4050,
+          3014,
+          2460
+        ],
+        [
+          2090,
+          2398,
+          8355,
+          7689,
+          6751
+        ],
+        [
+          846,
+          1043,
+          5015,
+          15305,
+          14560
+        ],
+        [
+          757,
+          720,
+          3037,
+          8027,
+          42612
+        ]
+      ]
+    },
+    "majority_class": {
+      "macro_f1": 0.10628215751642804,
+      "micro_f1": 0.3618512127753102,
+      "weighted_f1": 0.19229163796848017,
+      "within_one_grade": 0.6030875415794619,
+      "accuracy": 0.3618512127753102
+    }
+  },
+  "shap": {
+    "n_rows": 4000,
+    "mean_abs_shap": {
+      "has_superstructure_mud_mortar_stone": 0.2309,
+      "age_building": 0.1804,
+      "count_floors_pre_eq": 0.1425,
+      "height_ft_pre_eq": 0.1156,
+      "plinth_area_sq_ft": 0.1119,
+      "foundation_type": 0.1032,
+      "other_floor_type": 0.1008,
+      "roof_type": 0.0846,
+      "ground_floor_type": 0.0726,
+      "position": 0.0682,
+      "has_superstructure_timber": 0.0624,
+      "has_superstructure_stone_flag": 0.0456,
+      "has_superstructure_cement_mortar_brick": 0.0434,
+      "land_surface_condition": 0.0425,
+      "has_superstructure_bamboo": 0.0278,
+      "has_superstructure_adobe_mud": 0.0245,
+      "has_superstructure_rc_engineered": 0.0187,
+      "has_superstructure_mud_mortar_brick": 0.0174,
+      "has_superstructure_rc_non_engineered": 0.0144,
+      "plan_configuration": 0.014,
+      "has_superstructure_cement_mortar_stone": 0.0081,
+      "has_superstructure_other": 0.005
+    },
+    "grade5_mean_shap_by_level": {
+      "foundation_type": {
+        "Bamboo/Timber": -0.798,
+        "Cement-Stone/Brick": -0.112,
+        "Mud mortar-Stone/Brick": 0.093,
+        "Other": 0.034,
+        "RC": -0.579
+      },
+      "roof_type": {
+        "Bamboo/Timber-Heavy roof": 0.11,
+        "Bamboo/Timber-Light roof": 0.014,
+        "RCC/RB/RBC": -0.641
+      },
+      "ground_floor_type": {
+        "Brick/Stone": 0.077,
+        "Mud": 0.083,
+        "Other": -0.158,
+        "RC": -0.672,
+        "Timber": -0.038
+      },
+      "other_floor_type": {
+        "Not applicable": 0.351,
+        "RCC/RB/RBC": -0.117,
+        "Timber-Planck": 0.101,
+        "Timber/Bamboo-Mud": -0.069
+      },
+      "has_superstructure_mud_mortar_stone": {
+        "0": -0.577,
+        "1": 0.168
+      },
+      "has_superstructure_rc_engineered": {
+        "0": 0.015,
+        "1": -0.972
+      },
+      "has_superstructure_rc_non_engineered": {
+        "0": 0.01,
+        "1": -0.247
+      },
+      "has_superstructure_cement_mortar_brick": {
+        "0": 0.047,
+        "1": -0.758
+      },
+      "has_superstructure_timber": {
+        "0": 0.04,
+        "1": -0.101
+      }
+    },
+    "fig_importance": "/workspace/projects/eq_damage_ml/figures/fig5_shap_importance.png",
+    "fig_beeswarm": "/workspace/projects/eq_damage_ml/figures/fig6_shap_grade5_beeswarm.png"
+  },
+  "permutation": {
+    "n_rows": 6000,
+    "importance": {
+      "has_superstructure_mud_mortar_stone": {
+        "mean": 0.0394,
+        "std": 0.0018
+      },
+      "height_ft_pre_eq": {
+        "mean": 0.0342,
+        "std": 0.0048
+      },
+      "plinth_area_sq_ft": {
+        "mean": 0.028,
+        "std": 0.0037
+      },
+      "other_floor_type": {
+        "mean": 0.023,
+        "std": 0.0047
+      },
+      "count_floors_pre_eq": {
+        "mean": 0.0169,
+        "std": 0.002
+      },
+      "age_building": {
+        "mean": 0.0152,
+        "std": 0.0004
+      },
+      "roof_type": {
+        "mean": 0.0138,
+        "std": 0.004
+      },
+      "ground_floor_type": {
+        "mean": 0.0129,
+        "std": 0.0015
+      },
+      "has_superstructure_timber": {
+        "mean": 0.0119,
+        "std": 0.0011
+      },
+      "foundation_type": {
+        "mean": 0.0114,
+        "std": 0.0023
+      },
+      "land_surface_condition": {
+        "mean": 0.0112,
+        "std": 0.0035
+      },
+      "has_superstructure_stone_flag": {
+        "mean": 0.0085,
+        "std": 0.0021
+      },
+      "has_superstructure_mud_mortar_brick": {
+        "mean": 0.0057,
+        "std": 0.0014
+      },
+      "has_superstructure_adobe_mud": {
+        "mean": 0.0054,
+        "std": 0.0006
+      },
+      "has_superstructure_bamboo": {
+        "mean": 0.0047,
+        "std": 0.0004
+      },
+      "has_superstructure_rc_non_engineered": {
+        "mean": 0.004,
+        "std": 0.0017
+      },
+      "has_superstructure_cement_mortar_stone": {
+        "mean": 0.003,
+        "std": 0.0013
+      },
+      "has_superstructure_cement_mortar_brick": {
+        "mean": 0.0028,
+        "std": 0.0026
+      },
+      "position": {
+        "mean": 0.0025,
+        "std": 0.0001
+      },
+      "plan_configuration": {
+        "mean": 0.0003,
+        "std": 0.0009
+      },
+      "has_superstructure_rc_engineered": {
+        "mean": -0.0003,
+        "std": 0.0007
+      },
+      "has_superstructure_other": {
+        "mean": -0.0003,
+        "std": 0.0011
+      }
+    },
+    "fig": "/workspace/projects/eq_damage_ml/figures/fig7_permutation_importance.png"
+  },
+  "runtime_seconds": 255.5
+}
