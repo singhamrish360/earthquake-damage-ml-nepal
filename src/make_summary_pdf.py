@@ -79,7 +79,7 @@ s.append(Paragraph("Limitations and next steps", H))
 s.append(Paragraph("Single earthquake, region and survey; no per-building ground-motion input; intermediate grades hard to separate (macro-F1 0.39); subsampling used for the "
     "logistic baseline and CV; light hyper-parameter tuning; possible label bias from a grant-eligibility survey; dataset license not explicitly stated. Not for "
     "decisions on individual buildings. Next: add USGS ShakeMap intensity per ward, ordinal/cost-sensitive models, spatial cross-validation by district, and "
-    "transfer tests on Indian data. Code, executed notebook and all metrics are in the accompanying project files (see README).", B))
+    "transfer tests on Indian data. Code, executed notebook and all metrics: https://github.com/singhamrish360/earthquake-damage-ml-nepal (see README).", B))
 doc = SimpleDocTemplate(str(ROOT / "Project_Summary.pdf"), pagesize=A4, leftMargin=1.5*cm, rightMargin=1.5*cm, topMargin=1.2*cm, bottomMargin=1.1*cm,
                         title="Earthquake damage-grade prediction (Gorkha 2015) - Project summary", author="Amrish Singh")
 doc.build(s)
